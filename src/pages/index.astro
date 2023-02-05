@@ -5,7 +5,15 @@ import { getCollection } from "astro:content";
 const furniturePosts = await getCollection("mechanizmy-wyjazdu");
 ---
 
-<Base title="Welcome">
+<Base title="Janpol">
+	<div class="pb-20">
+	<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl ">Janpol Metalprodukcja </h1>
+	<p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl px-16 sm:px-16  xl:px-40 ">Naszą specjalizacją jest produkcja wyrobów metalowych dla przemysłu meblowego, takich jak mechanizmy wyjazdu, podnośniki meblowe, stelaże, ramy i nogi. Oferujemy wyroby malowane proszkowo, chromowane i cynkowane.<br>
+
+	Dzięki rozbudowanemu parkowi maszyn, możemy zaoferować produkcję elementów stalowych dla różnych branż. Wykonujemy części, podzespoły oraz konstrukcje dla przemysłu rolniczego, motoryzacyjnego czy budowlanego.<br>
+
+	Zapraszamy do siedziby naszej firmy, która znajduje się w Dębnie.<br></p></div>
+
   {furniturePosts.map((post) => 
   <h2>{post.data.title}</h2>
   <p>{post.data.description}</p>
