@@ -1,0 +1,15 @@
+---
+import Base from "@layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const furniturePosts = await getCollection("mechanizmy-wyjazdu");
+---
+
+<Base title="Welcome">
+  {furniturePosts.map((post) => 
+  <h2>{post.data.title}</h2>
+  <p>{post.data.description}</p>
+  <img src={post.data.image.src} alt={post.data.image.alt}>
+  <a href={`/mechanizmy-wyjazdu/${post.slug}/`}>Read about this item</a>
+  )}
+</Base>
