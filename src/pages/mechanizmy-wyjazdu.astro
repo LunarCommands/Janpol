@@ -1,26 +1,20 @@
 ---
+import Gallery from "@components/Gallery.svelte";
 import Base from "@layouts/Base.astro";
 import { getCollection } from "astro:content";
 
 const furniturePosts = await getCollection("mechanizmy-wyjazdu");
-
-const createImage = (post) => {
-  return post.data.images.map((image) => {
-    return `<img src=${image.src} alt=${image.alt}/>`;
-  });
-};
 ---
 
 <Base title="Mechanizmy Wyjazdu">
   <div>
     {
       furniturePosts.map((post) => (
-        <>
-          <h2>{post.data.title}</h2>
-          <p>{post.data.description}</p>
-          <a href={`/mechanizmy-wyjazdu/${post.slug}/`}>Read about this item</a>
-          <div>{createImage(post)}</div>
-        </>
+        <div>
+          <div>{post.data.title}</div>
+          <div>{post.data.description}</div>
+          <Gallery post={post.data.images} />
+        </div>
       ))
     }
   </div>
