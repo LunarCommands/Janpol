@@ -11,9 +11,7 @@ const furniturePosts = await getCollection("mechanizmy-wyjazdu");
     {
       furniturePosts.map((post) => (
         <div>
-          <div>{post.data.title}</div>
-          <div>{post.data.description}</div>
-          <Gallery post={post.data.images} />
+          <Gallery post={post} />
         </div>
       ))
     }
