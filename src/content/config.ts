@@ -10,7 +10,7 @@ const mechanizmyWyjazdu = defineCollection({
   schema: z.object({
     title: z.string().max(100, "For optimize SEO, please provide a title of 100 ch or less."),
     description: z.string(),
-    images: z.array(imageSchema).optional()
+    images: z.array(imageSchema)
   }),
 });
 // 4. Export a single `collections` object to register your collection(s)

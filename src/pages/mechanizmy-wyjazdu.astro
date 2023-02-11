@@ -11,14 +11,14 @@ const furniturePosts = await getCollection("mechanizmy-wyjazdu");
       {
         furniturePosts.map((post) => (
           <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 overflow-hidden rounded-lg shadow-lg flex flex-col justify-between">
-            <a href="#">
+            <a href={"/mechanizmy-wyjazdu/" + post.slug}>
               <img
                 class="block h-full w-full object-cover object-center"
                 src={post.data.images[0].src}
               />
             </a>
-            <div class="p-5">
-              <a href="#">
+            <div class="p-5 flex-1">
+              <a href={"/mechanizmy-wyjazdu/" + post.slug}>
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
                   {post.data.title}
                 </h5>
@@ -28,7 +28,7 @@ const furniturePosts = await getCollection("mechanizmy-wyjazdu");
               </p>
             </div>
             <a
-              href="#"
+              href={"/mechanizmy-wyjazdu/" + post.slug}
               class="inline-flex my-2 items-center px-3 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 rounded-lg hover:from-gray-400 hover:to-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 "
             >
               Więcej
