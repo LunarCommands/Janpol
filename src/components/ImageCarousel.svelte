@@ -21,16 +21,22 @@
         src={image.src}
         alt={image.alt}
         style={`
-          position: absolute;
-          opacity: ${currentIndex === index ? 1 : 0};
-          height: 100%;
-          width: 100%;
-        `}
+    position: absolute;
+    opacity: ${currentIndex === index ? 1 : 0};
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  `}
       />
     {/each}
   </div>
   <button
-    class="bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center absolute top-50 left-0 transform -translate-y-1/2"
+    class="bg-gray-500 text-white rounded-full w-10 h-10 flex items-center justify-center absolute top-50 transform translate(-50%, -50%)"
+    style="left: 25%"
     on:click={handlePrev}
   >
     <svg class="w-4 h-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -40,10 +46,15 @@
     </svg>
   </button>
   <button
-    class="bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center absolute top-50 right-0 transform -translate-y-1/2"
+    class="bg-gray-500 text-white rounded-full w-10 h-10 flex items-center justify-center absolute top-50 transform translate(-50%, -50%)"
+    style="right: 25%"
     on:click={handleNext}
   >
-    <svg class="w-4 h-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      class=" w-4 h-4"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"
       />
