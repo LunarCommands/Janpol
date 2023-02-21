@@ -18,7 +18,7 @@
     {#each images as image, index}
       <img
         key={index}
-        src={image.src}
+        src={"/" + image.src}
         alt={image.alt}
         style={`
     position: absolute;
