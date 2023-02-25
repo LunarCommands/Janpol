@@ -1,20 +1,17 @@
 ---
+import H1 from "@components/H1.svelte";
 import Base from "@layouts/Base.astro";
 ---
 
 <Base title="Janpol">
   <div
-    class="py-20 bg-cover bg-center h-screen"
+    class="py-10 bg-cover bg-center h-screen"
     style="background-image: url('/welder-janpol.jpg');"
   >
     <!-- <div class="w-0 h-0 border-t-12 border-r-4 bg-black text-gray-400">
       place to code the rectangle
     </div> -->
-    <h1
-      class="mx-10 text-4xl font-extrabold leading-none tracking-tight text-gray-300 md:text-4xl lg:text-5xl"
-    >
-      Janpol Metalprodukcja
-    </h1>
+    <H1 text="Janpol Metalprodukcja" />
     <p class="my-8 text-lg font-normal text-gray-300 lg:text-xl px-10">
       Naszą specjalizacją jest produkcja wyrobów metalowych<br /> dla przemysłu meblowego,
       takich jak mechanizmy wyjazdu,<br /> podnośniki meblowe, stelaże, ramy i nogi.
