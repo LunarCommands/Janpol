@@ -1,9 +1,8 @@
 <script>
-  export let post;
+  import { Carousel } from "flowbite-svelte";
+  export let images = [];
 </script>
 
-<div class="flex">
-  {#each post.data.images as p}
-    <img class="flex-wrap" src={"/" + p.src} alt={p.alt} />
-  {/each}
+<div class="max-w-4xl">
+  <Carousel {images} />
 </div>
