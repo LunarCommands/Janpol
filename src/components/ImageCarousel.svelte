@@ -1,15 +1,17 @@
 <script>
   let currentIndex = 0;
   export let images = [];
+  export let title = "";
+  export let description = "";
 
   $: currentIndex;
 
   function handlePrev() {
-    currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
   }
 
   function handleNext() {
-    currentIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+    currentIndex = (currentIndex + 1) % images.length;
   }
 </script>
 
@@ -21,16 +23,16 @@
         src={"/" + image.src}
         alt={image.alt}
         style={`
-    position: absolute;
-    opacity: ${currentIndex === index ? 1 : 0};
-    object-fit: contain;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-  `}
+          position: absolute;
+          opacity: ${currentIndex === index ? 1 : 0};
+          object-fit: contain;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+        `}
       />
     {/each}
     <div
@@ -38,13 +40,18 @@
     >
       {#each images as _, index}
         <button
-          class="h-3 w-3 rounded-full bg-gray-300 transition-colors duration-200 ease-out
-            hover:bg-gray-400 focus:bg-gray-400 focus:outline-none
-            {currentIndex === index ? 'bg-gray-700' : ''}"
+          class="h-3 w-3 rounded-full bg-gray-300 transition-colors duration-200 ease-out hover:bg-gray-400 focus:bg-gray-400 focus:outline-none {currentIndex ===
+          index
+            ? 'bg-gray-400'
+            : ''}"
           on:click={() => (currentIndex = index)}
         />
       {/each}
     </div>
+  </div>
+  <div class="flex flex-col items-center mt-4">
+    <h3 class="text-lg font-medium">{title}</h3>
+    <p class="text-gray-500 mt-2">{description}</p>
   </div>
   <button
     class="bg-gray-500 text-white rounded-full w-10 h-10 flex items-center justify-center absolute top-50 transform translate(-50%, -50%)"
