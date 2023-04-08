@@ -1,5 +1,4 @@
 ---
-import Gallery from "@components/Gallery.svelte";
 import { getCollection } from "astro:content";
 import ImageCarousel from "../../components/ImageCarousel.svelte";
 export async function getStaticPaths() {
@@ -10,7 +9,6 @@ export async function getStaticPaths() {
     props: { post },
   }));
 }
-
 const { post } = Astro.props;
 ---
 
@@ -19,4 +17,3 @@ const { post } = Astro.props;
 >
   <ImageCarousel client:load images={post.data.images} />
 </div>
-<!-- <Gallery client:load post={post} /> -->
