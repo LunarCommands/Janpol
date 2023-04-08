@@ -1,4 +1,6 @@
 <script>
+  import { onMount } from "svelte";
+  import Modal from "./Modal.svelte";
   let currentIndex = 0;
   export let images = [];
   export let title = "";
@@ -13,6 +15,13 @@
   function handleNext() {
     currentIndex = (currentIndex + 1) % images.length;
   }
+  function handleImageClick(image) {
+    Modal.openModal(image.src);
+  }
+
+  onMount(() => {
+    Modal.init();
+  });
 </script>
 
 <div class="relative">
@@ -33,6 +42,7 @@
           width: 100%;
           height: 100%;
         `}
+        on:click={() => handleImageClick(image)}
       />
     {/each}
     <div
