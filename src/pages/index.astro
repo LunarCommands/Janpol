@@ -1,18 +1,37 @@
 ---
-import H1 from "@components/H1.svelte";
 import Base from "@layouts/Base.astro";
-import P from "@components/P.svelte";
 ---
 
 <Base title="Janpol">
   <div
-    class="py-10 bg-cover bg-center h-screen"
+    class="relative h-screen bg-cover bg-center"
     style="background-image: url('/welder-janpol.avif');"
   >
-    <H1 text="Janpol Metalprodukcja" />
-    <P
-      text="Naszą specjalizacją jest produkcja wyrobów metalowych dla przemysłu meblowego, takich jak mechanizmy wyjazdu, podnośniki meblowe, stelaże, ramy i nogi. Oferujemy wyroby malowane proszkowo, chromowane i cynkowane.Dzięki rozbudowanemu parkowi maszyn, możemy zaoferować produkcję elementów stalowych dla różnych branż. Wykonujemy części, podzespoły oraz konstrukcje dla przemysłu rolniczego,<br /> motoryzacyjnego czy budowlanego. Zapraszamy do siedziby naszej firmy, która<br /> znajduje się w Dębnie."
-    />
+    <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
+    <div
+      class="absolute max-w-6xl mx-auto px-20 flex items-center justify-center h-full"
+    >
+      <div class="w-full lg:w-2/3 flex flex-col items-start">
+        <h1 class="text-5xl font-bold text-white mb-6">
+          Janpol Metalprodukcja
+        </h1>
+        <p class="text-lg leading-relaxed text-white">
+          Naszą specjalizacją jest produkcja wyrobów metalowych dla przemysłu
+          meblowego, takich jak mechanizmy wyjazdu, podnośniki meblowe, stelaże,
+          ramy i nogi. Oferujemy wyroby malowane proszkowo, chromowane i
+          cynkowane. Dzięki rozbudowanemu parkowi maszyn, możemy zaoferować
+          produkcję elementów stalowych dla różnych branż. Wykonujemy części,
+          podzespoły oraz konstrukcje dla przemysłu rolniczego, motoryzacyjnego
+          czy budowlanego. Zapraszamy do siedziby naszej firmy, która znajduje
+          się w Dębnie.
+        </p>
+      </div>
+      <div class="hidden md:block w-1/3 h-full relative">
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-gray-700 opacity-0 clip-path-metal"
+        >
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- <div class="text-4xl my-64">Placeholder for the rest of the site.</div> -->
 </Base>
