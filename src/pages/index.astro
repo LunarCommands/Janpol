@@ -1,6 +1,7 @@
 ---
 import H1 from "@components/H1.svelte";
 import Base from "@layouts/Base.astro";
+import P from "@components/P.svelte";
 ---
 
 <Base title="Janpol">
@@ -8,25 +9,10 @@ import Base from "@layouts/Base.astro";
     class="py-10 bg-cover bg-center h-screen"
     style="background-image: url('/welder-janpol.avif');"
   >
-    <!-- <div class="w-0 h-0 border-t-12 border-r-4 bg-black text-gray-400">
-      place to code the rectangle
-    </div> -->
-
     <H1 text="Janpol Metalprodukcja" />
-    <p class="my-8 text-lg font-normal text-gray-300 lg:text-xl px-10">
-      Naszą specjalizacją jest produkcja wyrobów metalowych<br /> dla przemysłu meblowego,
-      takich jak mechanizmy wyjazdu,<br /> podnośniki meblowe, stelaże, ramy i nogi.
-      Oferujemy<br /> wyroby malowane proszkowo, chromowane<br /> i cynkowane.<br
-      />
-
-      Dzięki rozbudowanemu parkowi maszyn, możemy<br /> zaoferować produkcję elementów
-      stalowych dla<br /> różnych branż. Wykonujemy części, podzespoły<br /> oraz
-      konstrukcje dla przemysłu rolniczego,<br /> motoryzacyjnego czy budowlanego.<br
-      />
-
-      Zapraszamy do siedziby naszej firmy, która<br /> znajduje się w Dębnie.<br
-      />
-    </p>
+    <P
+      text="Naszą specjalizacją jest produkcja wyrobów metalowych dla przemysłu meblowego, takich jak mechanizmy wyjazdu, podnośniki meblowe, stelaże, ramy i nogi. Oferujemy wyroby malowane proszkowo, chromowane i cynkowane.Dzięki rozbudowanemu parkowi maszyn, możemy zaoferować produkcję elementów stalowych dla różnych branż. Wykonujemy części, podzespoły oraz konstrukcje dla przemysłu rolniczego,<br /> motoryzacyjnego czy budowlanego. Zapraszamy do siedziby naszej firmy, która<br /> znajduje się w Dębnie."
+    />
   </div>
   <!-- <div class="text-4xl my-64">Placeholder for the rest of the site.</div> -->
 </Base>
