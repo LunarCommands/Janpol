@@ -1,8 +1,8 @@
 ---
 title: noga NG-05, NG-06, NG-07
 description: W ofercie nóg do mebli tapicerowanych firmy Janpol Metalprodukcja, znajdą Państwo nogi NG-05, NG-06, NG-07, które różnią się między sobą rozmiarami, dzięki czemu łatwo można dobrać odpowiedni rozmiar do wielu rodzajów kanap i sof. Nogi wyprodukowano z wysokiej jakości stali chromowanej lub malowanej proszkowo.
-images: [{ src: "nogi/NG-05.jpg", alt: "Noga NG-05" },
-{ src: "nogi/ng-05.png", alt: "Noga NG-05" }]
+images: [{ src: "/nogi/NG-05.jpg", alt: "Noga NG-05" },
+{ src: "/nogi/ng-05.png", alt: "Noga NG-05" }]
 ---
 
 Zastosowanie: Meble tapicerowane
