@@ -1,18 +1,108 @@
 ---
-import H1 from "@components/H1.svelte";
-import P from "@components/P.svelte";
 import Base from "@layouts/Base.astro";
 ---
 
-<Base title="Park Maszynowy">
-  <div
-    class="py-10 bg-cover bg-center h-screen"
-    style="background-image: url('/blured-welder-janpol.jpg');"
-  >
-    <H1 text="Park maszynowy" />
-    <P
-      text="Rozbudowany park maszynowy firmy Janpol, obejmuje profesjonalne maszyny, pozwalające na kompleksową produkcję wyrobów metalowych. Posiadamy: giętarkę do rur, profili, blach, gilotynę, piły taśmowe, tokarkę, różnego rodzaju maszyny spawalnicze, prasy hydrauliczne i mimośrodowe oraz malarnię proszkową. Oferujemy gięcie rur CNC, malowanie proszkowe metalu, cięcie metali, spawanie, tłoczenie i toczenie. Szczegóły oferty znajdują się poniżej."
-    />
-    <img src="park-maszynowy/CNC50BR2.jpg" />
-  </div>
+<Base title="Park maszynowy">
+  <section class="py-10 bg-white">
+    <div class="container mx-auto px-12 py-24">
+      <h2 class="text-3xl font-bold mb-10">Park maszynowy</h2>
+      <p class="text-lg leading-relaxed mb-20">
+        Rozbudowany park maszynowy firmy Janpol, obejmuje profesjonalne maszyny,
+        pozwalające na kompleksową produkcję wyrobów metalowych. Posiadamy:
+        giętarkę do rur, profili, blach, gilotynę, piły taśmowe, tokarkę,
+        różnego rodzaju maszyny spawalnicze, prasy hydrauliczne i mimośrodowe
+        oraz malarnię proszkową. Oferujemy gięcie rur CNC, malowanie proszkowe
+        metalu, cięcie metali, spawanie, tłoczenie i toczenie. Szczegóły oferty
+        znajdują się poniżej.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="bg-gray-100 p-8">
+          <img src="park-maszynowy/oferta-giecie.jpg" alt="" class="mb-6" />
+          <h3 class="text-lg font-bold mb-2">Gięcie metali CNC</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+            Gięcie różnych promieni w jednym detalu oraz rolowania w jednym
+            cyklu gięcia. Obsługiwane przekroje: rura max 38x2 profil kwadratowy
+            max 25x25x2 profil owalny max 38x35x2 pręt okrągły fi 22 pręt
+            kwadratowy 15x15
+          </p>
+        </div>
+        <div class="bg-gray-100 p-8">
+          <img src="park-maszynowy/oferta_ciecie.jpg" alt="" class="mb-6" />
+          <h3 class="text-lg font-bold mb-2">Cięcie metali CNC</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+            cięcie na gilotynach grubość maksymalna 8mm szerokość maksymalna
+            2000 mm
+          </p>
+        </div>
+        <div class="bg-gray-100 p-8">
+          <img src="park-maszynowy/oferta_ciecie2.jpg" alt="" class="mb-6" />
+          <h3 class="text-lg font-bold mb-2">Cięcie metali</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+            cięcie na piłach taśmowych: maksymalna wysokość cięcia 300mm
+            maksymalna szerokość cięcia 300mm
+          </p>
+        </div>
+        <div class="bg-gray-100 p-8">
+          <img src="park-maszynowy/oferta_spawanie.jpg" alt="" class="mb-6" />
+          <h3 class="text-lg font-bold mb-2">Spawanie</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+            spawanie metodą MIG-MAG spawanie metodą TIG spawanie aluminium
+            spawanie stali nierdzewnej
+          </p>
+        </div>
+        <div class="bg-gray-100 p-8">
+          <img src="park-maszynowy/oferta_tloczenie.jpg" alt="" class="mb-6" />
+          <h3 class="text-lg font-bold mb-2">Tłoczenie</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+            tłoczenie elementów na prasach hydraulicznych i mimośrodowych od 8
+            do 160 T.
+          </p>
+        </div>
+        <div class="bg-gray-100 p-8">
+          <img src="park-maszynowy/oferta_toczenie.jpg" alt="" class="mb-6" />
+          <h3 class="text-lg font-bold mb-2">Toczenie</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
+            felis tincidunt, tempor enim et, bibendum nunc.
+          </p>
+        </div>
+        <div class="bg-gray-100 p-8">
+          <img
+            src="park-maszynowy/oferta_malowanie_proszkowe.jpg"
+            alt=""
+            class="mb-6"
+          />
+          <h3 class="text-lg font-bold mb-2">Malowanie proszkowe</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
+            felis tincidunt, tempor enim et, bibendum nunc.
+          </p>
+        </div>
+        <div class="bg-gray-100 p-8">
+          <img
+            src="park-maszynowy/oferta_stanowisko_spawalnicze.jpg"
+            alt=""
+            class="mb-6"
+          />
+          <h3 class="text-lg font-bold mb-2">
+            Zrobotyzowane stanowisko spawalnicze
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+            Robot Arc Mate 120iC/12L Źródło Fronius TPSi 400 CMT MIG/MAG Palnik
+            MTB 330i W R Fronius Rozstaw między tarczami do mocowania: 2200mm
+            Średnica obracania: 1200mm Udźwig jednego stołu: 350 kg (wraz z
+            detalem i przyrządem) Zasięg maksymalny w poziomie: 2000 mm
+          </p>
+        </div>
+        <div class="bg-gray-100 p-8">
+          <img src="park-maszynowy/3D-R100.jpg" alt="" class="mb-6" />
+          <h3 class="text-lg font-bold mb-2">Giętarka do drutu 3D</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+            średnica pręta 3-13 mm gięcie różnych promieni w jednym procesie
+            wysoka wydajność wysoka precyzja
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>

@@ -1,17 +1,48 @@
 ---
-import H1 from "@components/H1.svelte";
-import P from "@components/P.svelte";
 import Base from "@layouts/Base.astro";
 ---
 
 <Base title="Kontakt">
-  <div
-    class="py-10 bg-cover bg-center h-screen"
-    style="background-image: url('/blured-welder-janpol.jpg');"
-  >
-    <H1 text="Kontakt" />
-    <P
-      text="JANPOL Metalprodukcja oferuje Państwu szeroki asortyment wyrobów metalowych m. in.: okucia i metalowe ramy do mebli tapicerowanych, podnośniki, nogi itp. Zapraszamy do kontaktu telefonicznego z naszą firmą lub do skorzystania z formularza kontaktowego."
-    />
-  </div>
+  <section class="py-48 bg-white">
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+      <h1
+        class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
+      >
+        Kontakt
+      </h1>
+      <div class="w-full mb-8">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t">
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 px-4 text-center pb-16">
+        <h3 class="py-4 text-2xl font-bold text-gray-800">Nasz adres</h3>
+        <div class="leading-loose">
+          <p class="text-gray-700">
+            <span class="font-bold">Adres:</span> ul. Przykładowa 123<br
+            />00-000 Miasto
+          </p>
+          <p class="text-gray-700">
+            <span class="font-bold">Telefon:</span> 1-800-123-4567
+          </p>
+          <p class="text-gray-700">
+            <span class="font-bold">E-mail:</span> info@twojadomena.com
+          </p>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 px-4 text-center">
+        <h3 class="py-4 text-2xl font-bold text-gray-800">Godziny otwarcia</h3>
+        <div class="leading-loose">
+          <p class="text-gray-700">
+            <span class="font-bold">Poniedziałek - Piątek:</span> 9:00 - 17:00
+          </p>
+          <p class="text-gray-700">
+            <span class="font-bold">Sobota:</span> 10:00 - 14:00
+          </p>
+          <p class="text-gray-700">
+            <span class="font-bold">Niedziela:</span> Zamknięte
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>

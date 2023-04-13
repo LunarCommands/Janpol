@@ -1,23 +1,52 @@
 ---
-import H1 from "@components/H1.svelte";
-import P from "@components/P.svelte";
 import Base from "@layouts/Base.astro";
 ---
 
 <Base title="About">
-  <div
-    class="py-10 bg-cover bg-center h-screen"
-    style="background-image: url('/blured-welder-janpol.jpg');"
-  >
-    <H1 text="O nas" />
-    <P
-      text="Firma JANPOL Metalprodukcja to rodzinne przedsiębiorstwo produkcyjne, które powstało w 1978 roku w Dębnie i od początku swojej działalności zajmuje się produkcją elementów oraz konstrukcji ze stali."
-    />
-    <P
-      text="Nasze doświadczenie w branży sprawia, że jesteśmy w stanie zaoferować produkty oraz usługi na najwyższym poziomie. Przez 34 lata istnienia firmy wykonywaliśmy wyroby metalowe dla klientów z różnych branż, zarówno dla odbiorców indywidualnych jak i instytucjonalnych. Były to podzespoły dla rolnictwa, techniki grzewczej, motoryzacji oraz dla przemysłu meblowego i budowlanego."
-    />
-    <P
-      text="Podczas ostatnich 12 lat naszą specjalizacją stała się produkcja okuć i akcesoriów do mebli tapicerowanych (np. podnośników meblowych) oraz konstrukcji wg indywidualnego projektu klienta. Posiadamy własną narzędziownię, co jest naszym ogromnym atutem. Dzięki temu jesteśmy w stanie błyskawicznie przygotować produkcję nowych elementów wg wymagań kontrahenta. Dysponujemy również własną flotą transportową. Nasza firma zatrudnia jedynie profesjonalnych fachowców z dużym doświadczeniem i wysokimi kwalifikacjami, co pozwala na utrzymanie wysokich standardów produkcji oraz terminowe i rzetelne wykonywanie zleceń."
-    />
-  </div>
+  <section class="py-10 bg-white">
+    <div class="container mx-auto px-12 py-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl font-bold mb-5">Who We Are</h2>
+          <p class="text-lg leading-relaxed mb-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
+            felis tincidunt, tempor enim et, bibendum nunc. Duis eget nunc
+            malesuada, laoreet arcu vel, ultrices sem. Quisque sit amet orci in
+            mauris finibus ornare non ac ante. Sed eu malesuada nisi.
+          </p>
+          <p class="text-lg leading-relaxed">
+            Pellentesque posuere eros non sapien congue aliquam. Sed pharetra
+            urna vel tellus faucibus posuere.
+          </p>
+        </div>
+        <div class="flex justify-center items-center">
+          <img
+            class="w-full h-auto md:max-w-md"
+            src="zlote-deby-laureaci.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto px-12 py-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="flex justify-center items-center">
+          <img class="w-full h-auto md:max-w-md" src="zloty-dab.jpg" alt="" />
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold mb-5">Our Mission</h2>
+          <p class="text-lg leading-relaxed mb-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
+            felis tincidunt, tempor enim et, bibendum nunc. Duis eget nunc
+            malesuada, laoreet arcu vel, ultrices sem. Quisque sit amet orci in
+            mauris finibus ornare non ac ante. Sed eu malesuada nisi.
+          </p>
+          <p class="text-lg leading-relaxed">
+            Pellentesque posuere eros non sapien congue aliquam. Sed pharetra
+            urna vel tellus faucibus posuere.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>
