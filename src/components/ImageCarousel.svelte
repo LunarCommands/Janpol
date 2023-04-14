@@ -1,6 +1,4 @@
 <script>
-  import { onMount } from "svelte";
-  import Modal from "./Modal.svelte";
   let currentIndex = 0;
   export let images = [];
   export let title = "";
@@ -15,13 +13,21 @@
   function handleNext() {
     currentIndex = (currentIndex + 1) % images.length;
   }
+
   function handleImageClick(image) {
-    Modal.openModal(image.src);
+    // handle image click
   }
 
-  onMount(() => {
-    Modal.init();
-  });
+  function handleImageKeyDown(event, image) {
+    if (event.key === "Enter" || event.key === " ") {
+    } else if (event.key === "ArrowLeft") {
+      const prevIndex = (currentIndex - 1 + images.length) % images.length;
+      currentIndex = prevIndex;
+    } else if (event.key === "ArrowRight") {
+      const nextIndex = (currentIndex + 1) % images.length;
+      currentIndex = nextIndex;
+    }
+  }
 </script>
 
 <div class="relative">
@@ -42,7 +48,6 @@
           width: 100%;
           height: 100%;
         `}
-        on:click={() => handleImageClick(image)}
       />
     {/each}
     <div
@@ -55,6 +60,9 @@
             ? 'bg-gray-400'
             : ''}"
           on:click={() => (currentIndex = index)}
+          tabindex={currentIndex === index ? 0 : -1}
+          aria-label={`Image ${index + 1}`}
+          aria-current={currentIndex === index ? "true" : "false"}
         />
       {/each}
     </div>
@@ -67,6 +75,9 @@
     class="bg-gray-500 text-white rounded-full w-10 h-10 flex items-center justify-center absolute top-50 transform translate(-50%, -50%)"
     style="left: 25%"
     on:click={handlePrev}
+    on:keydown={(event) => handleImageKeyDown(event)}
+    tabindex={0}
+    aria-label="Previous Image"
   >
     <svg class="w-5 h-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -78,6 +89,7 @@
     class="bg-gray-500 text-white rounded-full w-10 h-10 flex items-center justify-center absolute top-50 transform translate(-50%, -50%)"
     style="right: 25%"
     on:click={handleNext}
+    on:keydown={(event) => handleImageKeyDown(event)}
   >
     <svg class="w-5 h-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path

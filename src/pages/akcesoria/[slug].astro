@@ -18,7 +18,7 @@ const { post } = Astro.props;
     class="max-w-sm mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow mb-20"
   >
     <ImageCarousel
-      client:load
+      client:visible
       images={post.data.images}
       title={post.data.title}
     />
