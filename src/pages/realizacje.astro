@@ -3,6 +3,13 @@ import Base from "@layouts/Base.astro";
 ---
 
 <Base title="Realizacje">
+  <dialog id="customModal" class="p-8 max-w-7xl shadow-lg relative">
+    <div class="bg-gray-800"></div>
+    <button class="close-button absolute top-0 right-0 p-2 focus:outline-none"
+      >&times;</button
+    >
+    <img id="modalImage" src="" alt="modal image" />
+  </dialog>
   <section class="py-10 bg-white">
     <div class="container mx-auto px-12 py-24">
       <h1
@@ -16,93 +23,81 @@ import Base from "@layouts/Base.astro";
         okucia do mebli tapicerowanych: ramy metalowe do mebli, stelaże do sof,
         foteli, biurek oraz wiele innych wyrobów z metalu."
       </p>
-
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div>
           <img
+            id="myImg"
+            class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0 open-button"
+            src="/realizacje/realizacje-01.jpg"
+            alt="realizacje-01"
+          />
+        </div>
+        <div>
+          <img
+            id="myImg"
             class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-            alt="image description"
+            src="/realizacje/realizacje-02.jpg"
+            alt="realizacje-02"
           />
         </div>
         <div>
           <img
+            id="myImg"
             class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-            alt="image description"
+            src="/realizacje/realizacje-03.jpg"
+            alt="realizacje-03"
           />
         </div>
         <div>
           <img
+            id="myImg"
             class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-            alt="image description"
+            src="/realizacje/realizacje-04.jpg"
+            alt="realizacje-04"
           />
         </div>
         <div>
           <img
+            id="myImg"
             class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-            alt="image description"
+            src="/realizacje/realizacje-05.jpg"
+            alt="realizacje-05"
           />
         </div>
         <div>
           <img
+            id="myImg"
             class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-            alt="image description"
+            src="/realizacje/realizacje-06.jpg"
+            alt="realizacje-06"
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-            alt="image description"
+            id="myImg"
+            class="h-auto max-w-full rounded-lg cursor-pointer"
+            src="/realizacje/realizacje-07.jpg"
+            alt="realizacje-07"
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg"
-            alt=""
+            id="myImg"
+            class="h-auto max-w-full rounded-lg cursor-pointer"
+            src="/realizacje/realizacje-08.jpg"
+            alt="realizacje-08"
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg"
-            alt=""
+            id="myImg"
+            class="h-auto max-w-full rounded-lg cursor-pointer"
+            src="/realizacje/realizacje-09.jpg"
+            alt="realizacje-09"
           />
         </div>
       </div>
     </div>
   </section>
 </Base>
+<script src="@components/modal.js"></script>;
