@@ -34,6 +34,7 @@
   <div class="relative overflow-hidden w-full h-64">
     {#each images as image, index}
       <img
+        id="myImg"
         key={index}
         src={image.src}
         alt={image.alt}

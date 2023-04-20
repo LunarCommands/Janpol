@@ -14,6 +14,27 @@ const { post } = Astro.props;
 ---
 
 <Base title={post.data.title}>
+  <dialog
+    id="customModal"
+    class="p-8 max-w-xl shadow-lg relative w-screen fade-in"
+  >
+    <div class="bg-gray-800"></div>
+    <button class="close-button absolute top-0 right-0 p-2 focus:outline-none"
+      >&times;</button
+    >
+    <div class="flex w-full h-full">
+      <div class="flex-1 flex items-center justify-center">
+        <img
+          id="modalImage"
+          src=""
+          alt="modal image"
+          class="object-contain w-full h-full"
+          style="--modal-image-max-width: 90vw; --modal-image-max-height: 90vh;"
+        />
+      </div>
+    </div>
+  </dialog>
+
   <div
     class="max-w-sm mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow mb-20"
   >
@@ -24,3 +45,33 @@ const { post } = Astro.props;
     />
   </div>
 </Base>
+<style>
+  #customModal::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+</style>
+<script src="@components/modal.js"></script>
