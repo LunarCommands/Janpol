@@ -3,7 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById("customModal");
     const modalImage = document.getElementById("modalImage");
     modalImage.src = imageSrc;
+
+    // Store current scroll position
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
     modal.showModal();
+
+    // Set scroll position back to original value after modal is closed
+    modal.addEventListener('close', function() {
+      window.scrollTo(0, scrollTop);
+    });
   }
 
   const closeModalButton = document.querySelector(".close-button");

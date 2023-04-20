@@ -29,6 +29,13 @@ const podnosniki = defineCollection({
   }),
 });
 
+const realizacje = defineCollection({
+  schema: z.object({
+    src: z.string(),
+    alt: z.string(),
+  }),
+});
+
 const nogi = defineCollection({
   schema: z.object({
     title: z.string().max(100, "For optimize SEO, please provide a title of 100 ch or less."),

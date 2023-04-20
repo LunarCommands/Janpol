@@ -1,5 +1,7 @@
 ---
 import Base from "@layouts/Base.astro";
+import { getCollection } from "astro:content";
+const furniturePosts = await getCollection("realizacje");
 ---
 
 <Base title="Realizacje">
@@ -23,81 +25,22 @@ import Base from "@layouts/Base.astro";
         okucia do mebli tapicerowanych: ramy metalowe do mebli, stelaże do sof,
         foteli, biurek oraz wiele innych wyrobów z metalu."
       </p>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <div>
-          <img
-            id="myImg"
-            class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0 open-button"
-            src="/realizacje/realizacje-01.jpg"
-            alt="realizacje-01"
-          />
-        </div>
-        <div>
-          <img
-            id="myImg"
-            class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-            src="/realizacje/realizacje-02.jpg"
-            alt="realizacje-02"
-          />
-        </div>
-        <div>
-          <img
-            id="myImg"
-            class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-            src="/realizacje/realizacje-03.jpg"
-            alt="realizacje-03"
-          />
-        </div>
-        <div>
-          <img
-            id="myImg"
-            class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-            src="/realizacje/realizacje-04.jpg"
-            alt="realizacje-04"
-          />
-        </div>
-        <div>
-          <img
-            id="myImg"
-            class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-            src="/realizacje/realizacje-05.jpg"
-            alt="realizacje-05"
-          />
-        </div>
-        <div>
-          <img
-            id="myImg"
-            class="h-auto max-w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-            src="/realizacje/realizacje-06.jpg"
-            alt="realizacje-06"
-          />
-        </div>
-        <div>
-          <img
-            id="myImg"
-            class="h-auto max-w-full rounded-lg cursor-pointer"
-            src="/realizacje/realizacje-07.jpg"
-            alt="realizacje-07"
-          />
-        </div>
-        <div>
-          <img
-            id="myImg"
-            class="h-auto max-w-full rounded-lg cursor-pointer"
-            src="/realizacje/realizacje-08.jpg"
-            alt="realizacje-08"
-          />
-        </div>
-        <div>
-          <img
-            id="myImg"
-            class="h-auto max-w-full rounded-lg cursor-pointer"
-            src="/realizacje/realizacje-09.jpg"
-            alt="realizacje-09"
-          />
-        </div>
+
+      <div class="flex flex-wrap -mx-1 lg:-mx-4">
+        {
+          furniturePosts.map((post) => (
+            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 overflow-hidden rounded-lg shadow-lg flex flex-col justify-between animate-fade-in">
+              <img
+                id="myImg"
+                class="block h-full w-full object-cover object-center cursor-pointer"
+                src={post.data.src}
+                alt={post.data.alt}
+              />
+            </div>
+          ))
+        }
       </div>
+      <script src="@components/modal.js"></script>
     </div>
   </section>
 </Base>
-<script src="@components/modal.js"></script>;
