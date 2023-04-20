@@ -5,7 +5,11 @@ import Base from "@layouts/Base.astro";
 <Base title="Park maszynowy">
   <section class="py-10 bg-white">
     <div class="container mx-auto px-12 py-24 text-center">
-      <h2 class="text-3xl font-bold mb-10">Park maszynowy</h2>
+      <h1
+        class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-500 pb-12"
+      >
+        Park maszynowy
+      </h1>
       <p class="text-lg leading-relaxed mb-20">
         Rozbudowany park maszynowy firmy Janpol, obejmuje profesjonalne maszyny,
         pozwalające na kompleksową produkcję wyrobów metalowych. Posiadamy:
@@ -15,10 +19,38 @@ import Base from "@layouts/Base.astro";
         metalu, cięcie metali, spawanie, tłoczenie i toczenie. Szczegóły oferty
         znajdują się poniżej.
       </p>
+
+      <dialog
+        id="customModal"
+        class="p-8 max-w-xl shadow-lg relative w-screen fadeIn"
+      >
+        <div class="bg-gray-800"></div>
+        <button
+          class="close-button absolute top-0 right-0 p-2 focus:outline-none"
+          >&times;</button
+        >
+        <div class="flex w-full h-full">
+          <div class="flex-1 flex items-center justify-center">
+            <img
+              id="modalImage"
+              src=""
+              alt="modal image"
+              class="object-contain w-full h-full"
+              style="--modal-image-max-width: 90vw; --modal-image-max-height: 90vh;"
+            />
+          </div>
+        </div>
+      </dialog>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <div class="bg-gray-100 p-8 fade-in">
           <div class="flex justify-center">
-            <img src="/oferta-giecie.jpg" alt="oferta-gięcia" class="mb-6" />
+            <img
+              src="/oferta-giecie.jpg"
+              alt="oferta-gięcia"
+              class="mb-6"
+              id="myImg"
+            />
           </div>
           <h3 class="text-lg font-bold mb-2">Gięcie metali CNC</h3>
           <p class="text-gray-700 text-sm leading-relaxed mb-6">
@@ -34,6 +66,7 @@ import Base from "@layouts/Base.astro";
               src={"/oferta_ciecie.jpg"}
               alt={"cięcie-metali-CNC"}
               class="mb-6"
+              id="myImg"
             />
           </div>
           <h3 class="text-lg font-bold m-2">Cięcie metali CNC</h3>
@@ -44,7 +77,12 @@ import Base from "@layouts/Base.astro";
         </div>
         <div class="bg-gray-100 p-8 fade-in">
           <div class="flex justify-center">
-            <img src="/oferta_ciecie2.jpg" alt="cięcie-metali" class="mb-6" />
+            <img
+              src="/oferta_ciecie2.jpg"
+              alt="cięcie-metali"
+              class="mb-6"
+              id="myImg"
+            />
           </div>
           <h3 class="text-lg font-bold mb-2">Cięcie metali</h3>
           <p class="text-gray-700 text-sm leading-relaxed mb-6">
@@ -54,7 +92,12 @@ import Base from "@layouts/Base.astro";
         </div>
         <div class="bg-gray-100 p-8 fade-in">
           <div class="flex justify-center">
-            <img src="/oferta_spawanie.jpg" alt="spawanie" class="mb-6" />
+            <img
+              src="/oferta_spawanie.jpg"
+              alt="spawanie"
+              class="mb-6"
+              id="myImg"
+            />
           </div>
           <h3 class="text-lg font-bold mb-2">Spawanie</h3>
           <p class="text-gray-700 text-sm leading-relaxed mb-6">
@@ -64,7 +107,12 @@ import Base from "@layouts/Base.astro";
         </div>
         <div class="bg-gray-100 p-8 fade-in">
           <div class="flex justify-center">
-            <img src="/oferta_tloczenie.jpg" alt="tłoczenie" class="mb-6" />
+            <img
+              src="/oferta_tloczenie.jpg"
+              alt="tłoczenie"
+              class="mb-6"
+              id="myImg"
+            />
           </div>
           <h3 class="text-lg font-bold mb-2">Tłoczenie</h3>
           <p class="text-gray-700 text-sm leading-relaxed mb-6">
@@ -74,13 +122,15 @@ import Base from "@layouts/Base.astro";
         </div>
         <div class="bg-gray-100 p-8 fade-in">
           <div class="flex justify-center">
-            <img src="/oferta_toczenie.jpg" alt="toczenie" class="mb-6" />
+            <img
+              src="/oferta_toczenie.jpg"
+              alt="toczenie"
+              class="mb-6"
+              id="myImg"
+            />
           </div>
           <h3 class="text-lg font-bold mb-2">Toczenie</h3>
-          <p class="text-gray-700 text-sm leading-relaxed mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
-            felis tincidunt, tempor enim et, bibendum nunc.
-          </p>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6"></p>
         </div>
         <div class="bg-gray-100 p-8 fade-in">
           <div class="flex justify-center">
@@ -88,13 +138,11 @@ import Base from "@layouts/Base.astro";
               src="/oferta_malowanie_proszkowe.jpg"
               alt="malowanie-proszkowe"
               class="mb-6"
+              id="myImg"
             />
           </div>
           <h3 class="text-lg font-bold mb-2">Malowanie proszkowe</h3>
-          <p class="text-gray-700 text-sm leading-relaxed mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
-            felis tincidunt, tempor enim et, bibendum nunc.
-          </p>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6"></p>
         </div>
         <div class="bg-gray-100 p-8 fade-in">
           <div class="flex justify-center">
@@ -102,6 +150,7 @@ import Base from "@layouts/Base.astro";
               src="/oferta_stanowisko_spawalnicze.jpg"
               alt="stanowisko-spawalnicze"
               class="mb-6"
+              id="myImg"
             />
           </div>
           <h3 class="text-lg font-bold mb-2">
@@ -116,7 +165,7 @@ import Base from "@layouts/Base.astro";
         </div>
         <div class="bg-gray-100 p-8 fade-in">
           <div class="flex justify-center">
-            <img src="/3D-R100.jpg" alt="drut-3D" class="mb-6" />
+            <img src="/3D-R100.jpg" alt="drut-3D" class="mb-6" id="myImg" />
           </div>
           <h3 class="text-lg font-bold mb-2">Giętarka do drutu 3D</h3>
           <p class="text-gray-700 text-sm leading-relaxed mb-6">
@@ -129,6 +178,41 @@ import Base from "@layouts/Base.astro";
   </section>
 </Base>
 <style>
+  #customModal::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fadeIn {
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   .fade-in {
     opacity: 0;
     animation-name: fade-in;
@@ -136,7 +220,6 @@ import Base from "@layouts/Base.astro";
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
   }
-
   .fade-in:nth-child(1) {
     animation-delay: 0.2s;
   }
@@ -170,15 +253,5 @@ import Base from "@layouts/Base.astro";
   .fade-in:nth-child(9) {
     animation-delay: 1.8s;
   }
-
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translate(0, 10%);
-    }
-    to {
-      opacity: 1;
-      transform: translate(0, 0);
-    }
-  }
 </style>
+<script src="@components/modal.js"></script>

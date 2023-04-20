@@ -14,8 +14,11 @@ const furniturePosts = await getCollection("mechanizmy-wyjazdu");
   <div class="container my-12 mx-auto px-4 md:px-12">
     <div class="flex flex-wrap -mx-1 lg:-mx-4">
       {
-        furniturePosts.map((post) => (
-          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 overflow-hidden rounded-lg shadow-lg flex flex-col justify-between animate-fade-in">
+        furniturePosts.map((post, index) => (
+          <div
+            class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 overflow-hidden rounded-lg shadow-lg flex flex-col justify-between fade-in"
+            style={{ animationDelay: `${0.2 * (index + 1)}s` }}
+          >
             <a href={"/mechanizmy-wyjazdu/" + post.slug}>
               <img
                 class="block h-full w-full object-cover object-center"
@@ -58,74 +61,20 @@ const furniturePosts = await getCollection("mechanizmy-wyjazdu");
   </div>
 </Base>
 <style>
-  .animate-fade-in {
-    animation-name: fade-in;
-    animation-duration: 0.5s;
-    animation-delay: 0s;
-    animation-fill-mode: both;
-    opacity: 0;
-  }
-
-  .animate-fade-in:nth-child(1) {
-    animation-delay: 0s;
-  }
-  .animate-fade-in:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  .animate-fade-in:nth-child(3) {
-    animation-delay: 0.4s;
-  }
-  .animate-fade-in:nth-child(4) {
-    animation-delay: 0.6s;
-  }
-  .animate-fade-in:nth-child(5) {
-    animation-delay: 0.8s;
-  }
-  .animate-fade-in:nth-child(6) {
-    animation-delay: 1s;
-  }
-  .animate-fade-in:nth-child(7) {
-    animation-delay: 1.2s;
-  }
-  .animate-fade-in:nth-child(8) {
-    animation-delay: 1.4s;
-  }
-  .animate-fade-in:nth-child(9) {
-    animation-delay: 1.6s;
-  }
-  .animate-fade-in:nth-child(10) {
-    animation-delay: 1.8s;
-  }
-  .animate-fade-in:nth-child(11) {
-    animation-delay: 2s;
-  }
-  .animate-fade-in:nth-child(12) {
-    animation-delay: 2.2s;
-  }
-  .animate-fade-in:nth-child(13) {
-    animation-delay: 2.4s;
-  }
-  .animate-fade-in:nth-child(14) {
-    animation-delay: 2.6s;
-  }
-  .animate-fade-in:nth-child(15) {
-    animation-delay: 2.8s;
-  }
-  .animate-fade-in:nth-child(16) {
-    animation-delay: 3s;
-  }
-  .animate-fade-in:nth-child(17) {
-    animation-delay: 3.2s;
-  }
-
   @keyframes fade-in {
-    from {
+    0% {
       opacity: 0;
-      transform: translateY(10px);
     }
-    to {
+    100% {
       opacity: 1;
-      transform: translateY(0);
     }
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
   }
 </style>
