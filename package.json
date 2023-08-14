@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/svelte": "^2.0.1",
     "@astrojs/tailwind": "^3.0.1",
-    "astro": "^2.9.0",
+    "astro": "^2.10.7",
     "flowbite": "^1.6.3",
     "postcss-cli": "^10.1.0",
     "svelte": "^3.55.1",
